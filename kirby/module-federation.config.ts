@@ -10,4 +10,5 @@ export default createModuleFederationConfig({
     react: { singleton: true },
     "react-dom": { singleton: true },
   },
+  getPublicPath: `function() { return 'http://localhost:3001/' }`,
 });

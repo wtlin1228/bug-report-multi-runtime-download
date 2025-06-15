@@ -8,4 +8,11 @@ export default defineConfig({
   server: {
     port: 3002,
   },
+  output: {
+    minify: false,
+    cleanDistPath: true,
+    filename: {
+      js: "[name].[contenthash:8].js",
+    },
+  },
 });
