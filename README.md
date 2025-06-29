@@ -1,4 +1,4 @@
-Issue: 
+Issue: https://github.com/module-federation/core/issues/3862
 
 Reproduction steps:
 
