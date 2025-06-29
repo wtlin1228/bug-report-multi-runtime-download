@@ -1,37 +1,32 @@
-# Microfrontend with Module Federation
+Issue: 
 
-This project demonstrates a microfrontend architecture using [Module Federation](https://module-federation.io/index.html). It consists of two providers (`kirby`, `pikmin`) and one consumer (`host`).
+Reproduction steps:
 
-## Getting Started
+1. run provider 1:
 
-Follow the steps below to run each application locally:
+    ```bash
+    $ cd kirby
+    $ pnpm i
+    $ pnpm build
+    $ pnpm preview
+    ```
 
-### 1. Start the `kirby` provider (on `localhost:3001`)
+1. run provider 2:
 
-```bash
-cd kirby
-pnpm i
-pnpm dev
-```
+    ```bash
+    $ cd pikmin
+    $ pnpm i
+    $ pnpm build
+    $ pnpm preview
+    ```
 
-### 2. Start the `pikmin` provider (on `localhost:3002`)
+1. run consumer:
 
-```bash
-cd pikmin
-pnpm i
-pnpm dev
-```
+    ```bash
+    $ cd host
+    $ pnpm i
+    $ pnpm build
+    $ pnpm preview
+    ```
 
-### 3. Start the `host` consumer (typically on `localhost:3000`)
-
-```bash
-cd host
-pnpm i
-pnpm dev
-```
-
-## Notes
-
-Make sure all ports (3000, 3001, 3002) are available.
-
-Each project must be running concurrently for the microfrontend setup to function correctly.
+1. open `localhost:3000`
